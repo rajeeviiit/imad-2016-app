@@ -1,8 +1,8 @@
 console.log('Loaded!');
 var element =document.getElementById('main-text');
 element.innerHTML='Rajeev Singh';
-var img=document.getElementById('modi');
+var img=document.getElementById('madi');
 img.onClick=function(){
     
-    img.style.marginleft="100px";
+    madi.style.marginleft="100px";
 };
