@@ -4,5 +4,5 @@ element.innerHTML='Rajeev Singh';
 var img=document.getElementById('madi');
 img.onClick=function(){
     
-    madi.style.marginleft="100px";
+    madi.style.marginLeft="100px";
 };
