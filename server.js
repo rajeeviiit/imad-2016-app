@@ -88,7 +88,7 @@ var c=0;
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
   c = c+1;
-    res.send(cr.toString());
+    res.send(c.toString());
 });
 
 var counter=0;
