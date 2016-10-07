@@ -13,8 +13,3 @@ img.onclick=function(){
     
 };
 
-var counter=0;
-app.get('/',function(req, res){
-    counter = counter+1;
-    res.send(counter.toString());
-});
