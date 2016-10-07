@@ -15,14 +15,24 @@ img.onclick=function(){
 
 //counter code
 var button =document.getElementById('counter');
-var counter =0;
+
 button.onclick=function(){
-    //make the request to the counter endpoint
+    //create the request
+    var request=XMLHttpRequest();
     
     //capture the response and store it in variable
-    
-    //render the variable in correct span
-    counter =counter +1;
-    var span=document.getElementById('count');
-    span.innerHTML=counter.toString();
+    request.onreadystatechange=function(){
+        if(request.readyState===XMLHttpRequest.DONE){
+            //Take action
+            if(request.status===200){
+                var counter=request.responseText;
+                var span=document.getElementById('count');
+                span.innerHTML=counter.toString();
+            }
+        }
+        //do not yet
+    };
+    //make the request
+    request.open('GET','http://rajeeviiit.imad.hasura-app.io/counter',true);
+    request.send(null);
 };
